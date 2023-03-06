@@ -50,13 +50,13 @@ function renderTasks() {
     });
 
     const dotsIcon = document.createElement('i');
+    const deleteIcon = document.createElement('i');
     dotsIcon.classList.add('fas', 'fa-ellipsis-v', 'dots-icon');
     dotsIcon.addEventListener('click', () => {
       deleteIcon.style.display = 'block';
       dotsIcon.style.display = 'none';
     });
 
-    const deleteIcon = document.createElement('i');
     deleteIcon.classList.add('fas', 'fa-trash', 'delete-icon');
     deleteIcon.addEventListener('click', () => {
       deleteTask(items, task.index);
