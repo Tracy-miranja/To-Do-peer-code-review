@@ -1,9 +1,8 @@
 /**
  * @jest-environment jsdom
  */
-import { clearCompleted } from '../src/modules/status.js';
-import editTask from './edit.js';
 
+import { clearCompleted,updateCompletedStatus } from './status.js';
 const localStorageMock = (() => {
   let store = {};
 
@@ -72,3 +71,35 @@ describe('Clear completed function', () => {
     setLocalStorage('toDo', result);
     expect(localStorage.getItem('toDo')).toEqual(JSON.stringify(result));
   });
+});
+describe('test update completed Status', () => {
+  const container = document.createElement('div');
+  container.innerHTML = `
+      <form>
+        <input type="text" id="item" placeholder="Add to your list.... " required />
+        <button type="submit">Add</button>
+      </form>
+      <div class="task">
+          <ul id="task-list">
+            <li>
+              <div class="label-wrapper"><input type="checkbox" id="checkbox"><label style="text-decoration: none;">Task1</label><i
+                  class="fas fa-ellipsis-v dots-icon" aria-hidden="true"></i><i class="fas fa-trash delete-icon"
+                  aria-hidden="true"></i></div>
+            </li>
+          </ul>
+        </div>
+    `;
+  const checkbox = container.querySelector('#checkbox');
+  const items = [{ description: 'Task 1', completed: false, index: 0 }];
+
+  test('should change checkbox completed status when checked', () => {
+    checkbox.addEventListener('click', () => {
+      items.forEach((task) => {
+        updateCompletedStatus(task, items);
+      });
+    });
+    checkbox.click();
+    const expectedItems = [{ description: 'Task 1', completed: true, index: 0 }];
+    expect(items).toEqual(expectedItems);
+  });
+});
