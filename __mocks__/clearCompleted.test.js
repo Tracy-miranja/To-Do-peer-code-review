@@ -2,7 +2,8 @@
  * @jest-environment jsdom
  */
 
-import { clearCompleted,updateCompletedStatus } from './status.js';
+import { clearCompleted, updateCompletedStatus } from './status.js';
+
 const localStorageMock = (() => {
   let store = {};
 
