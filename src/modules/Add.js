@@ -6,5 +6,4 @@ function addTask(items, description) {
   };
   items.push(newTask);
 }
-
 export default addTask;
