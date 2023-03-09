@@ -25,11 +25,17 @@ One attachment
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 MIRANJA TRACY <a name="about-project"></a>
+# 📖 To Do List App Testing <a name="about-project"></a>
 
-** TRACY HTML/CSS & JavaScript Today's to do list** is a basic website that allows users to note down plan for the day in a list .
+** To Do List App Testing** is a project to test the functionality of a To Do List App whether it add and remove list items and data is stored according to changes in the local Storage  .
 
-## 🛠 Built With <a name="built-with"></a>
+## 🛠 Built With <a name="built-with">
+    Html
+    Css
+    Javascript
+    Webpack
+    Jest
+</a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -40,7 +46,13 @@ One attachment
     <li><a href="https://developer.mozilla.org/es/docs/Web/CSS">CSS</a></li>
   </ul>
 </details>
- 
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+- [ ] **Display To do Lists**
+- [ ] **Add to do list dynamically**
+- [ ] **Add list in the order of their index**
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
  
 <!-- LIVE DEMO -->
@@ -91,11 +103,18 @@ To run the project, open index.html in your text editor,right-click and open wit
 ## 👥 Authors <a name="author"></a>
  
  
-👤 **Tracy & Queenter**
+👤 **Tracy Miranja**
  
-- GitHub: [@githubhandle](https://github.com/Tracy-miranja)
-- Twitter: [@twitterhandle](https://twitter.com/tracymiranja)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/tracymiranja)
+- GitHub: [@Tracy Miranja](https://github.com/Tracy-miranja)
+- Twitter: [@Tracy Miranja](https://twitter.com/tracymiranja)
+- LinkedIn: [Tracy Miranja](https://linkedin.com/in/tracymiranja)
+
+👤 **Kevin Toro**
+
+- GitHub: [@torobucii](https://github.com/torobucii)
+- Twitter: [@torobucii](https://twitter.com/@torobucii)
+- LinkedIn: [Kevin Toro](https://linkedin.com/in/KevinToro)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
  
@@ -103,18 +122,12 @@ To run the project, open index.html in your text editor,right-click and open wit
  
 ## 🔭 Future Features <a name="future-features"></a>
  
-- [ ] **Web page header**
-- [ ] **Web page body**
-- [ ] **Web page footer**
-- [ ] **Desktop design**
+- [ ] **Implement Drag and drop functionality**
+
  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- Key FEATURES -->
 
-- [ ] **Homepage**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
