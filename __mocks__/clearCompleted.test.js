@@ -2,7 +2,6 @@
  * @jest-environment jsdom
  */
 import { clearCompleted } from '../src/modules/status.js';
-import editTask from './edit.js';
 
 const localStorageMock = (() => {
   let store = {};
@@ -72,3 +71,24 @@ describe('Clear completed function', () => {
     setLocalStorage('toDo', result);
     expect(localStorage.getItem('toDo')).toEqual(JSON.stringify(result));
   });
+
+  it('should edit the tasklist', () => {
+    const items = [
+      { description: 'Task 1', completed: true, index: 0 },
+      { description: 'Task 2', completed: true, index: 1 },
+      { description: 'Task 3', completed: false, index: 2 },
+    ];
+
+    const expectedItems = [
+      { description: 'Task 3', completed: false, index: 0 },
+    ];
+
+    const result = clearCompleted(items);
+    result.forEach((task, index) => {
+      task.index = index;
+    });
+    expect(result).toEqual(expectedItems);
+    setLocalStorage('toDo', result);
+    expect(localStorage.getItem('toDo')).toEqual(JSON.stringify(result));
+  });
+});
